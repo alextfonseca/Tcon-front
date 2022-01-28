@@ -21,18 +21,18 @@ Para instalar o projeto, siga estas etapas:
 Linux e macOS:
 
 ```bash
-$ git clone https://github.com/alextfonseca/T.C.O.N..git
-$ cd T.C.O.N.
-$ yarn ou npm
+$ git clone https://github.com/alextfonseca/Tcon-front.git
+$ cd Tcon-front
+$ yarn ou npm i
 $ expo start
 ```
 
 Windows:
 
 ```bash
-$ git clone https://github.com/alextfonseca/T.C.O.N..git
-$ cd T.C.O.N.
-$ yarn ou npm
+$ git clone https://github.com/alextfonseca/Tcon-front.git
+$ cd Tcon-front
+$ yarn ou npm i
 $ expo start
 ```
 
