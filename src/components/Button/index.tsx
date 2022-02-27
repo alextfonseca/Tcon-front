@@ -4,24 +4,14 @@ import { styles } from "./styles";
 interface ButtonProps {
   text: string;
   theme: string;
-  navigateTo?: string;
-  navigation?: any;
+  navigateTo?: () => void;
 }
 
-export const Button = ({
-  text,
-  theme,
-  navigateTo,
-  navigation,
-}: ButtonProps) => {
-  function navigateToUserLogin() {
-    navigation.navigate(`${navigateTo}`);
-  }
-
+export const Button = ({ text, theme, navigateTo }: ButtonProps) => {
   if (theme == "primary") {
     return (
       <>
-        <TouchableOpacity style={styles.primary} onPress={navigateToUserLogin}>
+        <TouchableOpacity style={styles.primary} onPress={navigateTo}>
           <Text style={styles.text}>{text}</Text>
         </TouchableOpacity>
       </>

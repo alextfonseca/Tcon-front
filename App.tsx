@@ -13,8 +13,6 @@ import {
 import AppLoading from "expo-app-loading";
 import { Navigation } from "./src/components/Navigation";
 
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
 export default function App() {
   const [fontsLoaded] = useFonts({
     Nunito_700Bold,
@@ -23,8 +21,6 @@ export default function App() {
     Raleway_300Light,
     Raleway_400Regular,
   });
-
-  const Stack = createNativeStackNavigator();
 
   if (!fontsLoaded) {
     return <AppLoading />;

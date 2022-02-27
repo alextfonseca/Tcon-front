@@ -7,8 +7,21 @@ import { styles } from "./styles";
 // illustration
 import Illustration from "../../assets/homeIllustration.svg";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 
-export default function Home({ navigation }: any) {
+// types
+import { RootStackParamsList } from "../../@types/navigation";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+
+type homeScreenProp = NativeStackNavigationProp<RootStackParamsList, "Home">;
+
+export default function Home() {
+  const navigation = useNavigation<homeScreenProp>();
+
+  function navigateToOversee() {
+    navigation.navigate("UserLogin");
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" backgroundColor="#000" />
@@ -24,10 +37,13 @@ export default function Home({ navigation }: any) {
           <Button
             text={"Quero fiscalizar"}
             theme={"primary"}
-            navigateTo={"UserLogin"}
-            navigation={navigation}
+            navigateTo={navigateToOversee}
           />
-          <Button text={"Quero patrocinar"} theme={"secondary"} />
+          <Button
+            text={"Quero patrocinar"}
+            theme={"secondary"}
+            navigateTo={navigateToOversee}
+          />
         </View>
       </View>
     </SafeAreaView>
