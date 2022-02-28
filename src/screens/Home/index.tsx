@@ -37,12 +37,12 @@ export default function Home() {
           <Button
             text={"Quero fiscalizar"}
             theme={"primary"}
-            navigateTo={navigateToOversee}
+            functionButton={navigateToOversee}
           />
           <Button
             text={"Quero patrocinar"}
             theme={"secondary"}
-            navigateTo={navigateToOversee}
+            functionButton={navigateToOversee}
           />
         </View>
       </View>

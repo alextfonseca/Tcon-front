@@ -4,14 +4,14 @@ import { styles } from "./styles";
 interface ButtonProps {
   text: string;
   theme: string;
-  navigateTo?: () => void;
+  functionButton?: () => void;
 }
 
-export const Button = ({ text, theme, navigateTo }: ButtonProps) => {
+export const Button = ({ text, theme, functionButton }: ButtonProps) => {
   if (theme == "primary") {
     return (
       <>
-        <TouchableOpacity style={styles.primary} onPress={navigateTo}>
+        <TouchableOpacity style={styles.primary} onPress={functionButton}>
           <Text style={styles.text}>{text}</Text>
         </TouchableOpacity>
       </>

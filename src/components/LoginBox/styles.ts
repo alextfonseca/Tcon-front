@@ -21,4 +21,24 @@ export const styles = StyleSheet.create({
     fontSize: theme.fonts.placeholderSize,
     fontFamily: theme.fonts.placeholder,
   },
+
+  input: {
+    width: "100%",
+    padding: 8,
+
+    marginBottom: 8,
+
+    borderColor: theme.colors.backgroundGreen,
+    borderWidth: 1,
+    borderRadius: 5,
+  },
+
+  content: {
+    justifyContent: "space-between",
+    width: "100%",
+  },
+
+  buttonContent: {
+    marginTop: 16,
+  },
 });
