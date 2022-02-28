@@ -1,4 +1,6 @@
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Text, TouchableOpacity } from "react-native";
+import { RootStackParamsList } from "../../@types/navigation";
 import { styles } from "./styles";
 
 interface ButtonProps {

@@ -1,21 +1,19 @@
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { ScrollView, TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
+import ArrowBack from "../../../assets/arrowIcon.svg";
+import Illustration from "../../../assets/loginIllustration.svg";
+
+import { LoginBox } from "../../../components/LoginBox";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 import { styles } from "./styles";
 
-import ArrowBack from "../../assets/arrowIcon.svg";
-import Illustration from "../../assets/loginIllustration.svg";
-import { LoginBox } from "../../components/LoginBox";
-import { useNavigation } from "@react-navigation/native";
-
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-
 // types
-import { RootStackParamsList } from "../../@types/navigation";
-
+import { RootStackParamsList } from "../../../@types/navigation";
 type userLoginScreenProp = NativeStackNavigationProp<
   RootStackParamsList,
-  "Home"
+  "HomeUser"
 >;
 
 const UserLogin = () => {
@@ -36,7 +34,7 @@ const UserLogin = () => {
           <Illustration />
         </View>
 
-        <LoginBox navigation={navigationToHome} />
+        <LoginBox />
       </View>
     </ScrollView>
   );

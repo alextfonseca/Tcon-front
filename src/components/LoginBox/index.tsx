@@ -1,32 +1,21 @@
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Button } from "../Button";
-import { InputPassword } from "../InputPassword";
-import { InputEmail } from "../InputEmail";
 import { styles } from "./styles";
-import { useState } from "react";
-import { api } from "../../services/api";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamsList } from "../../@types/navigation";
 
-interface LoginBoxProps {
-  navigation: () => void;
-}
+// types
+type userLoginScreenProp = NativeStackNavigationProp<
+  RootStackParamsList,
+  "HomeUser"
+>;
 
-export const LoginBox = ({ navigation }: LoginBoxProps) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+export const LoginBox = () => {
+  const navigation = useNavigation<userLoginScreenProp>();
 
-  async function handleLogin() {
-    const data = {
-      email,
-      password,
-    };
-
-    try {
-      await api
-        .post("signin", data)
-        .then((response) => console.warn(response.data));
-    } catch (error) {
-      console.warn(error);
-    }
+  function navigateToHomeUser() {
+    navigation.navigate("HomeUser");
   }
 
   return (
@@ -40,7 +29,7 @@ export const LoginBox = ({ navigation }: LoginBoxProps) => {
       </View>
 
       <TextInput
-        onChangeText={setEmail}
+        // onChangeText={setEmail}
         autoCompleteType="email"
         placeholder="E-mail"
         style={styles.input}
@@ -48,7 +37,7 @@ export const LoginBox = ({ navigation }: LoginBoxProps) => {
       />
 
       <TextInput
-        onChangeText={setPassword}
+        // onChangeText={setPassword}
         placeholder="Senha"
         style={styles.input}
         autoCompleteType="password"
@@ -59,7 +48,7 @@ export const LoginBox = ({ navigation }: LoginBoxProps) => {
         <Button
           text={"Entrar"}
           theme={"primary"}
-          functionButton={handleLogin}
+          functionButton={navigateToHomeUser}
         />
 
         <Button text={"Criar uma conta"} theme={"secondary"} />
