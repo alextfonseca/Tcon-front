@@ -1,7 +1,9 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import React from 'react'
 
-import Action from "../../assets/actionIcon.svg";
-import { styles } from "./styles";
+import { Image, Text, TouchableOpacity, View } from 'react-native'
+
+import Action from '../../assets/actionIcon.svg'
+import { styles } from './styles'
 
 export const PointsCardHome = () => {
   return (
@@ -10,7 +12,7 @@ export const PointsCardHome = () => {
         <Image
           style={styles.image}
           source={{
-            uri: "https://viagemeturismo.abril.com.br/wp-content/uploads/2017/12/istock-842960000.jpg?quality=70&strip=info&resize=680,453",
+            uri: 'https://viagemeturismo.abril.com.br/wp-content/uploads/2017/12/istock-842960000.jpg?quality=70&strip=info&resize=680,453'
           }}
         />
 
@@ -24,5 +26,5 @@ export const PointsCardHome = () => {
         </View>
       </View>
     </TouchableOpacity>
-  );
-};
+  )
+}

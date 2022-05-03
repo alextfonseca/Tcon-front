@@ -1,6 +1,8 @@
-import { TextInput, View } from "react-native";
+import React from 'react'
 
-import { styles } from "./styles";
+import { TextInput, View } from 'react-native'
+
+import { styles } from './styles'
 
 export const InputEmail = () => {
   return (
@@ -12,5 +14,5 @@ export const InputEmail = () => {
         keyboardType="email-address"
       />
     </View>
-  );
-};
+  )
+}

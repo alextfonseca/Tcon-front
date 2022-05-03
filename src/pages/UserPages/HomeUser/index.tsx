@@ -1,12 +1,14 @@
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import React from 'react'
 
-import { styles } from "./styles";
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
 
-import { ContainerGreen } from "../../../globals/styles/container";
+import { styles } from './styles'
 
-import Options from "../../../assets/optionsIcon.svg";
-import { SearchBox } from "../../../components/SearchBox";
-import { PointsCardHome } from "../../../components/PointsCardHome";
+import { ContainerGreen } from '../../../globals/styles/container'
+
+import Options from '../../../assets/optionsIcon.svg'
+import { SearchBox } from '../../../components/SearchBox'
+import { PointsCardHome } from '../../../components/PointsCardHome'
 
 export const HomeUser = () => {
   return (
@@ -44,5 +46,5 @@ export const HomeUser = () => {
         </View>
       </View>
     </ContainerGreen>
-  );
-};
+  )
+}

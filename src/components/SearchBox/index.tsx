@@ -1,8 +1,10 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import React from 'react'
 
-import Search from "../../assets/searchIcon.svg";
+import { TextInput, TouchableOpacity, View } from 'react-native'
 
-import { styles } from "./styles";
+import Search from '../../assets/searchIcon.svg'
+
+import { styles } from './styles'
 
 export const SearchBox = () => {
   return (
@@ -16,5 +18,5 @@ export const SearchBox = () => {
         placeholder="Pesquise por nome ou local"
       />
     </View>
-  );
-};
+  )
+}

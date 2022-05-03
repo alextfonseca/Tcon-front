@@ -1,5 +1,4 @@
-import React from "react";
-import styled from "styled-components/native";
+import styled from 'styled-components/native'
 
 export const ContainerGreen = styled.View`
   background-color: #12b232;
@@ -10,7 +9,7 @@ export const ContainerGreen = styled.View`
   align-items: center;
 
   padding-top: 16;
-`;
+`
 
 export const ContainerWhite = styled.View`
   background-color: #f8f9fa;
@@ -22,4 +21,4 @@ export const ContainerWhite = styled.View`
   align-items: center;
 
   padding-top: 16;
-`;
+`
