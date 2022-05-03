@@ -5,21 +5,28 @@ import { Image, Text, TouchableOpacity, View } from 'react-native'
 import Action from '../../assets/actionIcon.svg'
 import { styles } from './styles'
 
-export const PointsCardHome = () => {
+interface Place {
+  name: string,
+  city: string,
+  state: string,
+  image: string
+}
+
+export const PointsCardHome = ({state, image, name, city}: Place) => {
   return (
     <TouchableOpacity>
       <View style={styles.container}>
         <Image
           style={styles.image}
           source={{
-            uri: 'https://viagemeturismo.abril.com.br/wp-content/uploads/2017/12/istock-842960000.jpg?quality=70&strip=info&resize=680,453'
+            uri: `http://192.168.200.6:8000/uploads/${image}`
           }}
         />
 
         <View style={styles.content}>
           <View>
-            <Text style={styles.local}>Parque ibirapuera</Text>
-            <Text style={styles.city}>São Paulo - SP</Text>
+            <Text style={styles.local}>{name}</Text>
+            <Text style={styles.city}>{city} - {state}</Text>
           </View>
 
           <Action />
