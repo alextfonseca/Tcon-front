@@ -1,6 +1,8 @@
-import { TextInput, View } from "react-native";
+import React from 'react'
 
-import { styles } from "./styles";
+import { TextInput, View } from 'react-native'
+
+import { styles } from './styles'
 
 export const InputPassword = () => {
   return (
@@ -11,5 +13,5 @@ export const InputPassword = () => {
         secureTextEntry={true}
       />
     </View>
-  );
-};
+  )
+}

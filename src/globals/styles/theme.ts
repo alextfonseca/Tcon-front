@@ -1,41 +1,41 @@
 export const theme = {
   colors: {
-    backgroundGreen: "#12B232",
-    backgroundWhite: "#F8F9FA",
+    backgroundGreen: '#12B232',
+    backgroundWhite: '#F8F9FA',
 
-    title: "#343A40",
-    subTitle: "#495057",
+    title: '#343A40',
+    subTitle: '#495057',
 
-    text: "#868E96",
+    text: '#868E96',
 
-    whiteGray: "#E9ECEF",
-    darkGray: "#495057",
+    whiteGray: '#E9ECEF',
+    darkGray: '#495057',
 
-    whiteGreen: "#51CF66",
+    whiteGreen: '#51CF66',
 
-    menuGray: "#E9ECEF",
+    menuGray: '#E9ECEF',
 
-    caution: "#EA4335",
+    caution: '#EA4335'
   },
 
   fonts: {
-    title: "Nunito_700Bold",
+    title: 'Nunito_700Bold',
     titleSize: 18,
-    city: "Nunito_500Bold",
+    city: 'Nunito_500Bold',
     citySize: 16,
-    subtitle: "Nunito_400Regular",
+    subtitle: 'Nunito_400Regular',
     subtitleSize: 12,
-    text: "Raleway_300Light",
+    text: 'Raleway_300Light',
     textSize: 12,
-    button: "Nunito_500Medium",
+    button: 'Nunito_500Medium',
     buttonSize: 18,
-    textMenu: "Nunito_300Light",
+    textMenu: 'Nunito_300Light',
     textMenuSize: 10,
-    pageTitle: "Raleway_400Regular",
+    pageTitle: 'Raleway_400Regular',
     pageTitleSize: 18,
-    introductionTitle: "Nunito_700Bold",
+    introductionTitle: 'Nunito_700Bold',
     introductionTitleSize: 25,
-    placeholder: "Raleway_300Light",
-    placeholderSize: 14,
-  },
-};
+    placeholder: 'Raleway_300Light',
+    placeholderSize: 14
+  }
+}

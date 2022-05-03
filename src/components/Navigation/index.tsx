@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react'
 
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import UserLogin from "../../pages/UserPages/UserLogin";
-import Home from "../../pages/Home";
-import { HomeUser } from "../../pages/UserPages/HomeUser";
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import UserLogin from '../../pages/UserPages/UserLogin'
+import Home from '../../pages/Home'
+import { HomeUser } from '../../pages/UserPages/HomeUser'
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator()
 
 export const Navigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerShown: false,
+          headerShown: false
         }}
         initialRouteName="Home"
       >
@@ -22,5 +22,5 @@ export const Navigation = () => {
         <Stack.Screen name="HomeUser" component={HomeUser} />
       </Stack.Navigator>
     </NavigationContainer>
-  );
-};
+  )
+}

@@ -1,26 +1,28 @@
-import { ScrollView, TouchableOpacity, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import React from 'react'
 
-import ArrowBack from "../../../assets/arrowIcon.svg";
-import Illustration from "../../../assets/loginIllustration.svg";
+import { ScrollView, TouchableOpacity, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
-import { LoginBox } from "../../../components/LoginBox";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import ArrowBack from '../../../assets/arrowIcon.svg'
+import Illustration from '../../../assets/loginIllustration.svg'
 
-import { styles } from "./styles";
+import { LoginBox } from '../../../components/LoginBox'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+
+import { styles } from './styles'
 
 // types
-import { RootStackParamsList } from "../../../@types/navigation";
+import { RootStackParamsList } from '../../../@types/navigation'
 type userLoginScreenProp = NativeStackNavigationProp<
   RootStackParamsList,
-  "HomeUser"
->;
+  'HomeUser'
+>
 
 const UserLogin = () => {
-  const navigation = useNavigation<userLoginScreenProp>();
+  const navigation = useNavigation<userLoginScreenProp>()
 
   function navigationToHome() {
-    navigation.navigate("Home");
+    navigation.navigate('Home')
   }
 
   return (
@@ -37,7 +39,7 @@ const UserLogin = () => {
         <LoginBox />
       </View>
     </ScrollView>
-  );
-};
+  )
+}
 
-export default UserLogin;
+export default UserLogin

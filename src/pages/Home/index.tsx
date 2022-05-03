@@ -1,25 +1,27 @@
-import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
-import { Button } from "../../components/Button";
+import React from 'react'
 
-import { styles } from "./styles";
+import { StatusBar } from 'expo-status-bar'
+import { Text, View } from 'react-native'
+import { Button } from '../../components/Button'
+
+import { styles } from './styles'
 
 // illustration
-import Illustration from "../../assets/homeIllustration.svg";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { useNavigation } from "@react-navigation/native";
+import Illustration from '../../assets/homeIllustration.svg'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native'
 
 // types
-import { RootStackParamsList } from "../../@types/navigation";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamsList } from '../../@types/navigation'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 
-type homeScreenProp = NativeStackNavigationProp<RootStackParamsList, "Home">;
+type homeScreenProp = NativeStackNavigationProp<RootStackParamsList, 'Home'>
 
 export default function Home() {
-  const navigation = useNavigation<homeScreenProp>();
+  const navigation = useNavigation<homeScreenProp>()
 
   function navigateToOversee() {
-    navigation.navigate("UserLogin");
+    navigation.navigate('UserLogin')
   }
 
   return (
@@ -35,17 +37,17 @@ export default function Home() {
 
         <View style={styles.containerButton}>
           <Button
-            text={"Quero fiscalizar"}
-            theme={"primary"}
+            text={'Quero fiscalizar'}
+            theme={'primary'}
             functionButton={navigateToOversee}
           />
           <Button
-            text={"Quero patrocinar"}
-            theme={"secondary"}
+            text={'Quero patrocinar'}
+            theme={'secondary'}
             functionButton={navigateToOversee}
           />
         </View>
       </View>
     </SafeAreaView>
-  );
+  )
 }

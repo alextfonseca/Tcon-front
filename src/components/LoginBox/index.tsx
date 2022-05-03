@@ -1,21 +1,23 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
-import { Button } from "../Button";
-import { styles } from "./styles";
-import { useNavigation } from "@react-navigation/native";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamsList } from "../../@types/navigation";
+import React from 'react'
+
+import { Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Button } from '../Button'
+import { styles } from './styles'
+import { useNavigation } from '@react-navigation/native'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { RootStackParamsList } from '../../@types/navigation'
 
 // types
 type userLoginScreenProp = NativeStackNavigationProp<
   RootStackParamsList,
-  "HomeUser"
->;
+  'HomeUser'
+>
 
 export const LoginBox = () => {
-  const navigation = useNavigation<userLoginScreenProp>();
+  const navigation = useNavigation<userLoginScreenProp>()
 
   function navigateToHomeUser() {
-    navigation.navigate("HomeUser");
+    navigation.navigate('HomeUser')
   }
 
   return (
@@ -46,13 +48,13 @@ export const LoginBox = () => {
 
       <View style={styles.buttonContent}>
         <Button
-          text={"Entrar"}
-          theme={"primary"}
+          text={'Entrar'}
+          theme={'primary'}
           functionButton={navigateToHomeUser}
         />
 
-        <Button text={"Criar uma conta"} theme={"secondary"} />
+        <Button text={'Criar uma conta'} theme={'secondary'} />
       </View>
     </View>
-  );
-};
+  )
+}
