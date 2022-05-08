@@ -6,27 +6,29 @@ import Action from '../../assets/actionIcon.svg'
 import { styles } from './styles'
 
 interface Place {
-  name: string,
-  city: string,
-  state: string,
+  name: string
+  city: string
+  state: string
   image: string
 }
 
-export const PointsCardHome = ({state, image, name, city}: Place) => {
+export const PointsCardHome = ({ state, image, name, city }: Place) => {
   return (
     <TouchableOpacity>
       <View style={styles.container}>
         <Image
           style={styles.image}
           source={{
-            uri: `http://192.168.200.6:8000/uploads/${image}`
+            uri: `${image}`
           }}
         />
 
         <View style={styles.content}>
           <View>
             <Text style={styles.local}>{name}</Text>
-            <Text style={styles.city}>{city} - {state}</Text>
+            <Text style={styles.city}>
+              {city} - {state}
+            </Text>
           </View>
 
           <Action />

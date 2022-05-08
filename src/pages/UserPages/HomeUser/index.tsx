@@ -1,64 +1,64 @@
-import React, {useState, useEffect} from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import React from 'react'
+import { ScrollView, Text, View } from 'react-native'
 
-import axios from 'axios';
+import { styles } from './styles'
 
-import { styles } from "./styles";
+import { SearchBox } from '../../../components/SearchBox'
+import { PointsCardHome } from '../../../components/PointsCardHome'
+import { Layout } from '../../../components/Layout'
 
-import { ContainerGreen } from "../../../globals/styles/container";
-
-import Options from "../../../assets/optionsIcon.svg";
-import { SearchBox } from "../../../components/SearchBox";
-import { PointsCardHome } from "../../../components/PointsCardHome";
-
-interface Place {
-  name: string,
-  city: string,
-  state: string,
-  id: string,
-  image: string
-}
-
+const data = [
+  {
+    id: 1,
+    imageUrl:
+      'https://images.unsplash.com/photo-1585938389612-a552a28d6914?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=860&q=80',
+    name: 'Parque do povo',
+    city: 'São Paulo',
+    state: 'SP'
+  },
+  {
+    id: 2,
+    imageUrl:
+      'https://images.unsplash.com/photo-1585938389612-a552a28d6914?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=860&q=80',
+    name: 'Parque do povo',
+    city: 'São Paulo',
+    state: 'SP'
+  },
+  {
+    id: 3,
+    imageUrl:
+      'https://images.unsplash.com/photo-1585938389612-a552a28d6914?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=860&q=80',
+    name: 'Parque do povo',
+    city: 'São Paulo',
+    state: 'SP'
+  }
+]
 
 export const HomeUser = () => {
-  const [place, setPlace] = useState<Place[]>([])
-  
-  useEffect(() => {
-    axios.get('http://192.168.200.6:8000/place')
-    .then((res) => {
-      setPlace(res.data)
-    })
-    .catch(err => console.log(err));
-  }, [])
   return (
-    <ContainerGreen>
-      <View style={styles.header}>
-        <Text style={styles.headerText}>😁 Olá, Alex</Text>
+    <Layout title="Olá Alex">
+      <>
+        <SearchBox />
+        <View style={styles.contentHeader}>
+          <Text style={styles.title}>Locais</Text>
 
-        <TouchableOpacity>
-          <Options />
-        </TouchableOpacity>
-      </View>
-
-      <SearchBox />
-
-      <View style={styles.container}>
-        <View style={styles.content}>
-          <View style={styles.contentHeader}>
-            <Text style={styles.title}>Locais</Text>
-
-            <Text style={styles.points}>{place.length} pontos</Text>
-          </View>
-
-          <ScrollView style={styles.pointsContainer}>
-            {
-              place.map((element:Place) => {
-                return <PointsCardHome key={element.id} image={element.image} name={element.name} city={element.city} state={element.state}/> 
-              })
-            }
-          </ScrollView>
+          <Text style={styles.points}>{data.length} pontos</Text>
         </View>
-      </View>
-    </ContainerGreen>
-  );
-};
+
+        <ScrollView style={styles.pointsContainer}>
+          {data.map(item => {
+            return (
+              <PointsCardHome
+                key={item.id}
+                image={item.imageUrl}
+                name={item.name}
+                city={item.city}
+                state={item.state}
+              />
+            )
+          })}
+        </ScrollView>
+      </>
+    </Layout>
+  )
+}

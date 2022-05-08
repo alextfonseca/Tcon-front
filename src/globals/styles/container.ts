@@ -9,6 +9,8 @@ export const ContainerGreen = styled.View`
   align-items: center;
 
   padding-top: 16;
+
+  position: relative;
 `
 
 export const ContainerWhite = styled.View`

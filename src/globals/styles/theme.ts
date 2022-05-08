@@ -21,6 +21,8 @@ export const theme = {
   fonts: {
     title: 'Nunito_700Bold',
     titleSize: 18,
+    claimText: 'Nunito_300Light',
+    claimTextSize: 14,
     city: 'Nunito_500Bold',
     citySize: 16,
     subtitle: 'Nunito_400Regular',

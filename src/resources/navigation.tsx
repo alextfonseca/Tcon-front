@@ -2,11 +2,10 @@ import React from 'react'
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import UserLogin from '../../pages/UserPages/UserLogin'
-import Home from '../../pages/Home'
-import { HomeUser } from '../../pages/UserPages/HomeUser'
-import { Ranking } from '../../pages/Ranking/index';
-
+import Home from '../pages/Home'
+import UserLogin from '../pages/UserPages/UserLogin'
+import { HomeUser } from '../pages/UserPages/HomeUser'
+import { Ranking } from '../pages/UserPages/Ranking'
 const Stack = createNativeStackNavigator()
 
 export const Navigation = () => {
@@ -16,7 +15,7 @@ export const Navigation = () => {
         screenOptions={{
           headerShown: false
         }}
-        initialRouteName="Ranking"
+        initialRouteName="Home"
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="UserLogin" component={UserLogin} />

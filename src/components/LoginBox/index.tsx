@@ -24,10 +24,6 @@ export const LoginBox = () => {
     <View style={styles.content}>
       <View style={styles.textContent}>
         <Text style={styles.title}>Login</Text>
-
-        <TouchableOpacity>
-          <Text style={styles.buttonText}>Esqueceu a senha ?</Text>
-        </TouchableOpacity>
       </View>
 
       <TextInput
@@ -45,6 +41,12 @@ export const LoginBox = () => {
         autoCompleteType="password"
         secureTextEntry={true}
       />
+
+      <View style={styles.forgotPassword}>
+        <TouchableOpacity>
+          <Text style={styles.buttonText}>Esqueceu a senha ?</Text>
+        </TouchableOpacity>
+      </View>
 
       <View style={styles.buttonContent}>
         <Button
