@@ -9,6 +9,8 @@ export const styles = StyleSheet.create({
     borderBottomColor: theme.colors.whiteGray,
     borderBottomWidth: 1,
 
+    paddingTop: 60,
+
     paddingBottom: 8
   },
 

@@ -19,7 +19,7 @@ export const Menu = () => {
   }
 
   function navigateToClaimPage() {
-    navigation.navigate('Claim')
+    navigation.navigate('Claims')
   }
 
   function navigateToRankingPage() {

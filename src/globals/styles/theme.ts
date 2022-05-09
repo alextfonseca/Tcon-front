@@ -11,6 +11,8 @@ export const theme = {
     whiteGray: '#E9ECEF',
     darkGray: '#495057',
 
+    grayCard: '#DEE2E6',
+
     whiteGreen: '#51CF66',
 
     menuGray: '#E9ECEF',
@@ -23,7 +25,7 @@ export const theme = {
     titleSize: 18,
     claimText: 'Nunito_300Light',
     claimTextSize: 14,
-    city: 'Nunito_500Bold',
+    city: 'Nunito_500Medium',
     citySize: 16,
     subtitle: 'Nunito_400Regular',
     subtitleSize: 12,
