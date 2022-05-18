@@ -52,6 +52,7 @@ export const ClaimCard = ({
         </View>
 
         <Image
+          style={styles.image}
           source={{
             uri: `${image}`
           }}

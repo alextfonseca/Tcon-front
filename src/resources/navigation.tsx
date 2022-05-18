@@ -9,6 +9,9 @@ import { Ranking } from '../pages/UserPages/Ranking'
 import { Claims } from '../pages/UserPages/Claims'
 import { Sponsors } from '../pages/UserPages/Sponsors'
 import { Tips } from '../pages/UserPages/Tips'
+import SponsorLogin from '../pages/SponsorPages/SponsorLogin'
+import { HomeSponsors } from '../pages/SponsorPages/HomeSponsor'
+import { Theme } from '../pages/UserPages/CreateNewClaim/theme'
 const Stack = createNativeStackNavigator()
 
 export const Navigation = () => {
@@ -27,6 +30,10 @@ export const Navigation = () => {
         <Stack.Screen name="Claims" component={Claims} />
         <Stack.Screen name="Sponsors" component={Sponsors} />
         <Stack.Screen name="Tips" component={Tips} />
+        <Stack.Screen name="SponsorLogin" component={SponsorLogin} />
+        <Stack.Screen name="HomeSponsor" component={HomeSponsors} />
+
+        <Stack.Screen name="ClaimTheme" component={Theme} />
       </Stack.Navigator>
     </NavigationContainer>
   )

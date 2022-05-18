@@ -33,5 +33,14 @@ export const styles = StyleSheet.create({
     fontSize: theme.fonts.claimTextSize,
     fontFamily: theme.fonts.claimText,
     color: theme.colors.text
+  },
+
+  image: {
+    width: 60,
+    height: 60,
+
+    borderRadius: 100,
+
+    margin: 8
   }
 })

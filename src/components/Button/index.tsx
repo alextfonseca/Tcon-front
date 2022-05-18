@@ -21,7 +21,7 @@ export const Button = ({ text, theme, functionButton }: ButtonProps) => {
   } else {
     return (
       <>
-        <TouchableOpacity style={styles.secondary}>
+        <TouchableOpacity style={styles.secondary} onPress={functionButton}>
           <Text style={styles.text}>{text}</Text>
         </TouchableOpacity>
       </>

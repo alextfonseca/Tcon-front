@@ -11,17 +11,15 @@ import Illustration from '../../assets/homeIllustration.svg'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native'
 
-// types
-import { RootStackParamsList } from '../../@types/navigation'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
-
-type homeScreenProp = NativeStackNavigationProp<RootStackParamsList, 'Home'>
-
 export default function Home() {
-  const navigation = useNavigation<homeScreenProp>()
+  const navigation = useNavigation<any>()
 
-  function navigateToOversee() {
+  function navigateToUserLogin() {
     navigation.navigate('UserLogin')
+  }
+
+  function navigateToSponsorLogin() {
+    navigation.navigate('SponsorLogin')
   }
 
   return (
@@ -39,12 +37,12 @@ export default function Home() {
           <Button
             text={'Quero fiscalizar'}
             theme={'primary'}
-            functionButton={navigateToOversee}
+            functionButton={navigateToUserLogin}
           />
           <Button
             text={'Quero patrocinar'}
             theme={'secondary'}
-            functionButton={navigateToOversee}
+            functionButton={navigateToSponsorLogin}
           />
         </View>
       </View>

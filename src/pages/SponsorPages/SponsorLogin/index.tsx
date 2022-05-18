@@ -4,7 +4,7 @@ import { ScrollView, TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 import ArrowBack from '../../../assets/arrowIcon.svg'
-import Illustration from '../../../assets/loginUserIllustration.svg'
+import Illustration from '../../../assets/loginSponsorsIllustration.svg'
 
 import { LoginBox } from '../../../components/LoginBox'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
@@ -18,7 +18,7 @@ type userLoginScreenProp = NativeStackNavigationProp<
   'HomeUser'
 >
 
-const UserLogin = () => {
+const SponsorLogin = () => {
   const navigation = useNavigation<userLoginScreenProp>()
 
   function navigationToHome() {
@@ -36,10 +36,10 @@ const UserLogin = () => {
           <Illustration />
         </View>
 
-        <LoginBox link={'HomeUser'} />
+        <LoginBox link={'HomeSponsor'} />
       </View>
     </ScrollView>
   )
 }
 
-export default UserLogin
+export default SponsorLogin

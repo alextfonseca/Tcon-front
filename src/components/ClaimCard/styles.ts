@@ -49,5 +49,14 @@ export const styles = StyleSheet.create({
     fontSize: theme.fonts.subtitleSize,
     fontFamily: theme.fonts.subtitle,
     color: theme.colors.subTitle
+  },
+
+  image: {
+    width: '100%',
+    height: 200,
+
+    marginTop: 16,
+
+    borderRadius: 8
   }
 })

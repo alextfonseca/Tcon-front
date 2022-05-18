@@ -24,6 +24,7 @@ export const RankingCard = ({
         <Text style={styles.classification}>{id}</Text>
 
         <Image
+          style={styles.image}
           source={{
             uri: 'https://images.unsplash.com/photo-1585938389612-a552a28d6914?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=860&q=80'
           }}

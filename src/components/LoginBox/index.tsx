@@ -4,20 +4,16 @@ import { Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { Button } from '../Button'
 import { styles } from './styles'
 import { useNavigation } from '@react-navigation/native'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { RootStackParamsList } from '../../@types/navigation'
 
-// types
-type userLoginScreenProp = NativeStackNavigationProp<
-  RootStackParamsList,
-  'HomeUser'
->
+interface LoginBoxProps {
+  link: string
+}
 
-export const LoginBox = () => {
-  const navigation = useNavigation<userLoginScreenProp>()
+export const LoginBox = ({ link }: LoginBoxProps) => {
+  const navigation = useNavigation<any>()
 
-  function navigateToHomeUser() {
-    navigation.navigate('HomeUser')
+  function navigateToPage() {
+    navigation.navigate(link)
   }
 
   return (
@@ -52,7 +48,7 @@ export const LoginBox = () => {
         <Button
           text={'Entrar'}
           theme={'primary'}
-          functionButton={navigateToHomeUser}
+          functionButton={navigateToPage}
         />
 
         <Button text={'Criar uma conta'} theme={'secondary'} />

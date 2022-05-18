@@ -36,13 +36,20 @@ const data = [
 
 export const HomeUser = () => {
   return (
-    <Layout title="Olá Alex">
+    <Layout
+      title="Olá Alex"
+      showAddNewButton={true}
+      text={'Adicionar novo ponto de preservação'}
+      link={'Tips'}
+    >
       <>
         <SearchBox />
         <View style={styles.contentHeader}>
-          <Text style={styles.title}>Locais</Text>
+          <Text style={styles.title}>Pontos de preservação</Text>
 
-          <Text style={styles.points}>{data.length} pontos</Text>
+          <Text style={styles.points}>
+            {data.length} Pontos de preservação cadastrados
+          </Text>
         </View>
 
         <ScrollView style={styles.pointsContainer}>

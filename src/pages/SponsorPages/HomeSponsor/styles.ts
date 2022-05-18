@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
-import { theme } from '../../globals/styles/theme'
+import { theme } from '../../../globals/styles/theme'
 
 export const styles = StyleSheet.create({
   header: {
@@ -23,7 +23,8 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
 
-    marginTop: 32,
+    marginTop: 18,
+    paddingTop: 16,
 
     paddingBottom: 160,
 
@@ -33,5 +34,25 @@ export const styles = StyleSheet.create({
   content: {
     width: '90%',
     alignSelf: 'center'
+  },
+
+  text: {
+    color: theme.colors.title,
+    fontFamily: theme.fonts.title,
+    fontSize: theme.fonts.pageTitleSize
+  },
+
+  contentCard: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+
+    marginBottom: 16
+  },
+
+  image: {
+    width: 80,
+    height: 80,
+    borderRadius: 1000
   }
 })
