@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { theme } from '../../globals/styles/theme'
+import { theme } from '../../styles/theme'
 
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 

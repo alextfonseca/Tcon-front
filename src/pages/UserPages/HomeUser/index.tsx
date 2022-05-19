@@ -1,11 +1,17 @@
 import React from 'react'
-import { ScrollView, Text, View } from 'react-native'
+import {
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View
+} from 'react-native'
 
 import { styles } from './styles'
 
-import { SearchBox } from '../../../components/SearchBox'
-import { PointsCardHome } from '../../../components/PointsCardHome'
-import { Layout } from '../../../components/Layout'
+import Search from '../../../assets/searchIcon.svg'
+import { PointsCardHome } from '../components/PointsCardHome'
+import { UserLayout } from '../../../Layouts/UserLayout'
 
 const data = [
   {
@@ -36,14 +42,24 @@ const data = [
 
 export const HomeUser = () => {
   return (
-    <Layout
+    <UserLayout
       title="Olá Alex"
       showAddNewButton={true}
       text={'Adicionar novo ponto de preservação'}
       link={'Tips'}
     >
       <>
-        <SearchBox />
+        <View style={styles.searchBox}>
+          <TouchableOpacity>
+            <Search />
+          </TouchableOpacity>
+
+          <TextInput
+            style={styles.searchBoxInput}
+            placeholder="Pesquise por nome ou local"
+          />
+        </View>
+
         <View style={styles.contentHeader}>
           <Text style={styles.title}>Pontos de preservação</Text>
 
@@ -66,6 +82,6 @@ export const HomeUser = () => {
           })}
         </ScrollView>
       </>
-    </Layout>
+    </UserLayout>
   )
 }

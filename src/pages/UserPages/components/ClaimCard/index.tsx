@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 
 // icons
-import LocalIcon from '../../assets/localIcon.svg'
-import DateIcon from '../../assets/dateIcon.svg'
-import LinkIcon from '../../assets/actionIcon.svg'
+import LocalIcon from '../../../../assets/localIcon.svg'
+import DateIcon from '../../../../assets/dateIcon.svg'
+import LinkIcon from '../../../../assets/actionIcon.svg'
 
 import { styles } from './styles'
 
@@ -30,7 +30,7 @@ export const ClaimCard = ({
     setShowDescription(!showDescription)
   }
 
-  if (!showDescription) {
+  if (showDescription) {
     return (
       <TouchableOpacity
         style={styles.container}

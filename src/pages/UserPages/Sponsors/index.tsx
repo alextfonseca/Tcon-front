@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScrollView } from 'react-native'
-import { Layout } from '../../../components/Layout'
-import { SponsorsCard } from '../../../components/SponsorsCard'
+import { UserLayout } from '../../../Layouts/UserLayout'
+import { SponsorsCard } from '../components/SponsorsCard'
 
 import { styles } from './styles'
 
@@ -34,7 +34,7 @@ const data = [
 
 export const Sponsors = () => {
   return (
-    <Layout title={'Patrocinadores'}>
+    <UserLayout title={'Patrocinadores'} showAddNewButton={false}>
       <ScrollView style={styles.container}>
         {data.map(item => {
           return (
@@ -48,6 +48,6 @@ export const Sponsors = () => {
           )
         })}
       </ScrollView>
-    </Layout>
+    </UserLayout>
   )
 }

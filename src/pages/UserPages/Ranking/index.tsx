@@ -1,9 +1,9 @@
 import React from 'react'
 import { ScrollView } from 'react-native'
+import { UserLayout } from '../../../Layouts/UserLayout'
+import { RankingCard } from '../components/RankingCard'
 
-import { RankingCard } from '../../../components/RankingCard'
 import { styles } from './styles'
-import { Layout } from '../../../components/Layout'
 
 const data = [
   {
@@ -33,7 +33,7 @@ const data = [
 
 export const Ranking = () => {
   return (
-    <Layout title="Ranking">
+    <UserLayout title="Ranking" showAddNewButton={true}>
       <ScrollView style={styles.rankingCards}>
         {data.map(item => {
           return (
@@ -47,6 +47,6 @@ export const Ranking = () => {
           )
         })}
       </ScrollView>
-    </Layout>
+    </UserLayout>
   )
 }

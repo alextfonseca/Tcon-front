@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 
-import Action from '../../assets/actionIcon.svg'
+import Action from '../../../../assets/actionIcon.svg'
 import { styles } from './styles'
 
 interface Place {

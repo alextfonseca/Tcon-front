@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { theme } from "../../globals/styles/theme";
+import { StyleSheet } from 'react-native'
+import { theme } from '../../styles/theme'
 
 export const styles = StyleSheet.create({
   primary: {
@@ -8,23 +8,23 @@ export const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
 
-    alignItems: "center",
+    alignItems: 'center'
   },
 
   secondary: {
     backgroundColor: theme.colors.darkGray,
 
-    alignItems: "center",
+    alignItems: 'center',
 
     padding: 10,
     borderRadius: 5,
 
-    marginTop: 8,
+    marginTop: 8
   },
 
   text: {
     color: theme.colors.backgroundWhite,
     fontFamily: theme.fonts.button,
-    fontSize: theme.fonts.buttonSize,
-  },
-});
+    fontSize: theme.fonts.buttonSize
+  }
+})
