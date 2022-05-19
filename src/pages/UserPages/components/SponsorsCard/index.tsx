@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Image, Text, View } from 'react-native'
-import { Button } from '../Button'
+import { Button } from '../../../../components/Button'
 import { styles } from './styles'
 
 interface SponsorsCardProps {

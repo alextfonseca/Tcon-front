@@ -1,12 +1,12 @@
 import React from 'react'
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 
-import { ContainerGreen } from '../../../globals/styles/container'
+import { ContainerGreen } from '../../../styles/container'
 import { styles } from './styles'
 
 // icons
 import ExitIcon from '../../../assets/exitIcon.svg'
-import { SponsorInformationCard } from '../../../components/SponsorInformationCard'
+import { SponsorInformationCard } from '../components/SponsorInformationCard'
 import { useNavigation } from '@react-navigation/native'
 
 export const HomeSponsors = () => {

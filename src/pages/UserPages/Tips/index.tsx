@@ -1,8 +1,6 @@
 import React from 'react'
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
 
-import { Layout } from '../../../components/Layout'
-
 // icons
 import TripIcon from '../../../assets/tripIcon.svg'
 import CampIcon from '../../../assets/campIcon.svg'
@@ -12,10 +10,11 @@ import CameraIcon from '../../../assets/cameraIcon.svg'
 import TicketIcon from '../../../assets/ticketIcon.svg'
 import LinkIcon from '../../../assets/actionIcon.svg'
 import { styles } from './styles'
+import { UserLayout } from '../../../Layouts/UserLayout'
 
 export const Tips = () => {
   return (
-    <Layout title="Dicas">
+    <UserLayout title={'Dicas'} showAddNewButton={false}>
       <ScrollView>
         <View style={styles.buttons}>
           <TouchableOpacity style={styles.button}>
@@ -59,6 +58,6 @@ export const Tips = () => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </Layout>
+    </UserLayout>
   )
 }

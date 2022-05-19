@@ -1,13 +1,13 @@
 import React, { ReactChild, ReactChildren } from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 
-import { ContainerGreen } from '../../globals/styles/container'
+import { ContainerGreen } from '../../styles/container'
 
 // icons
 import Options from '../../assets/optionsIcon.svg'
-import { Menu } from '../Menu'
+import { Menu } from '../../components/Menu'
 import { styles } from './styles'
-import { AddNewButton } from '../AddNewButton'
+import { AddNewButton } from '../../components/AddNewButton'
 
 interface AuxProps {
   children: ReactChild | ReactChildren
@@ -17,7 +17,7 @@ interface AuxProps {
   text?: string
 }
 
-export const Layout = ({
+export const UserLayout = ({
   children,
   title,
   link,

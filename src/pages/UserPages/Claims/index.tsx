@@ -1,9 +1,10 @@
 import React from 'react'
 import { ScrollView } from 'react-native'
 
-import { ClaimCard } from '../../../components/ClaimCard'
 import { styles } from './styles'
-import { Layout } from '../../../components/Layout'
+
+import { ClaimCard } from '../components/ClaimCard'
+import { UserLayout } from '../../../Layouts/UserLayout'
 
 const data = [
   {
@@ -46,7 +47,7 @@ const data = [
 
 export const Claims = () => {
   return (
-    <Layout
+    <UserLayout
       title="Reclamações"
       showAddNewButton={true}
       text={'Adicionar nova reclamação'}
@@ -66,6 +67,6 @@ export const Claims = () => {
           )
         })}
       </ScrollView>
-    </Layout>
+    </UserLayout>
   )
 }

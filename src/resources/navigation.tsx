@@ -12,6 +12,9 @@ import { Tips } from '../pages/UserPages/Tips'
 import SponsorLogin from '../pages/SponsorPages/SponsorLogin'
 import { HomeSponsors } from '../pages/SponsorPages/HomeSponsor'
 import { Theme } from '../pages/UserPages/CreateNewClaim/theme'
+import { Description } from '../pages/UserPages/CreateNewClaim/description'
+import { Local } from '../pages/UserPages/CreateNewClaim/local'
+
 const Stack = createNativeStackNavigator()
 
 export const Navigation = () => {
@@ -23,17 +26,27 @@ export const Navigation = () => {
         }}
         initialRouteName="Home"
       >
+        {/* home */}
         <Stack.Screen name="Home" component={Home} />
+
+        {/* login */}
         <Stack.Screen name="UserLogin" component={UserLogin} />
+        <Stack.Screen name="SponsorLogin" component={SponsorLogin} />
+
+        {/* usuário */}
         <Stack.Screen name="HomeUser" component={HomeUser} />
         <Stack.Screen name="Ranking" component={Ranking} />
         <Stack.Screen name="Claims" component={Claims} />
         <Stack.Screen name="Sponsors" component={Sponsors} />
         <Stack.Screen name="Tips" component={Tips} />
-        <Stack.Screen name="SponsorLogin" component={SponsorLogin} />
+
+        {/* patrocinador */}
         <Stack.Screen name="HomeSponsor" component={HomeSponsors} />
 
+        {/* adicionar reclamação */}
         <Stack.Screen name="ClaimTheme" component={Theme} />
+        <Stack.Screen name="ClaimDescription" component={Description} />
+        <Stack.Screen name="ClaimLocal" component={Local} />
       </Stack.Navigator>
     </NavigationContainer>
   )
