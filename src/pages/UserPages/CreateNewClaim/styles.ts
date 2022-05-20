@@ -2,26 +2,14 @@ import { StyleSheet } from 'react-native'
 import { theme } from '../../../styles/theme'
 
 export const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    height: '100%',
-
-    justifyContent: 'space-between'
-  },
-
-  title: {
-    textAlign: 'center',
-    fontSize: theme.fonts.introductionTitleSize,
-    fontFamily: theme.fonts.introductionTitle,
-    color: theme.colors.title
-  },
-
   input: {
-    width: '90%',
+    width: '100%',
 
-    marginTop: '40%',
+    marginTop: 180,
 
     alignSelf: 'center',
+
+    padding: 8,
 
     height: 50,
 
@@ -34,9 +22,13 @@ export const styles = StyleSheet.create({
   },
 
   inputArea: {
-    width: '90%',
+    width: '100%',
 
-    marginTop: '20%',
+    marginTop: 180,
+
+    textAlignVertical: 'top',
+
+    padding: 8,
 
     alignSelf: 'center',
 
@@ -48,25 +40,5 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
 
     borderRadius: 8
-  },
-
-  button: {
-    width: '80%',
-
-    justifyContent: 'center',
-    alignSelf: 'center',
-
-    paddingBottom: 64
-  },
-
-  closeButton: {
-    alignSelf: 'center',
-
-    marginTop: 32
-  },
-
-  closeButtonText: {
-    color: theme.colors.caution,
-    fontSize: theme.fonts.titleSize
   }
 })

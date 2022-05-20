@@ -1,44 +1,18 @@
-import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 
-import { Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { Button } from '../../../components/Button'
-import { Steps } from '../components/ClaimSteps'
+import { TextInput } from 'react-native'
+import { ScreenWithForm } from '../../../Layouts/ScreenWithForm'
+
 import { styles } from './styles'
 
 export const Local = () => {
-  const navigation = useNavigation<any>()
-
-  function navigationToHomeUser() {
-    navigation.navigate('HomeUser')
-  }
-
   return (
-    <View style={styles.container}>
-      <View>
-        <Steps screen={'local'} />
-
-        <Text style={styles.title}>
-          Conte o que houve para que possamos mandar para as autoridades
-        </Text>
-
-        <TextInput style={styles.input} placeholder="Tema" />
-      </View>
-
-      <View style={styles.button}>
-        <Button
-          text={'Continuar'}
-          theme={'primary'}
-          functionButton={navigationToHomeUser}
-        />
-
-        <TouchableOpacity
-          style={styles.closeButton}
-          onPress={navigationToHomeUser}
-        >
-          <Text style={styles.closeButtonText}>Cancelar</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+    <ScreenWithForm
+      stepsScreen={'local'}
+      linkToNextScreen={'Claims'}
+      title={'Qual foi o local ?'}
+    >
+      <TextInput style={styles.input} placeholder="Parque do povo" />
+    </ScreenWithForm>
   )
 }

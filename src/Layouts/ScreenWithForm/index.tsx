@@ -8,33 +8,45 @@ import { styles } from './styles'
 interface CreateNewClaimProps {
   children: any
   linkToNextScreen: string
+  title: string
+  stepsScreen: string
 }
 
 export const ScreenWithForm = ({
   children,
-  linkToNextScreen
+  linkToNextScreen,
+  title,
+  stepsScreen
 }: CreateNewClaimProps) => {
   const navigation = useNavigation<any>()
 
-  function navigationToHomeUser() {
-    navigation.navigate('HomeUser')
+  function navigationToNextScreen() {
+    navigation.navigate(linkToNextScreen)
+  }
+
+  function navigationToCancel() {
+    navigation.navigate('Claims')
   }
 
   return (
     <View style={styles.container}>
-      <Steps screen={'about'} />
+      <Steps screen={stepsScreen} />
 
-      <Text>
-        Conte o que houve para que possamos mandar para as autoridades
-      </Text>
+      <View style={styles.content}>
+        <Text style={styles.title}>{title}</Text>
 
-      <View>{children}</View>
+        <View>{children}</View>
+      </View>
 
-      <View>
-        <Button text={'Continuar'} theme={'primary'} />
+      <View style={styles.buttons}>
+        <Button
+          text={'Continuar'}
+          theme={'primary'}
+          functionButton={navigationToNextScreen}
+        />
 
-        <TouchableOpacity onPress={navigationToHomeUser}>
-          <Text>Cancelar</Text>
+        <TouchableOpacity onPress={navigationToCancel}>
+          <Text style={styles.cancelText}>Cancelar</Text>
         </TouchableOpacity>
       </View>
     </View>
