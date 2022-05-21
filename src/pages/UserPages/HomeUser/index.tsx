@@ -46,7 +46,7 @@ export const HomeUser = () => {
       title="Olá Alex"
       showAddNewButton={true}
       text={'Adicionar novo ponto de preservação'}
-      link={'Tips'}
+      link={'CreateNewPoint'}
     >
       <>
         <View style={styles.searchBox}>

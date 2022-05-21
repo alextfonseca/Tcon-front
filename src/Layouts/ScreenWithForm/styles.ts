@@ -29,7 +29,9 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: theme.fonts.introductionTitleSize,
     fontFamily: theme.fonts.introductionTitle,
-    color: theme.colors.title
+    color: theme.colors.title,
+
+    marginTop: 80
   },
 
   cancelText: {

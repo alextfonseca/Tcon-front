@@ -14,6 +14,8 @@ import { HomeSponsors } from '../pages/SponsorPages/HomeSponsor'
 import { Theme } from '../pages/UserPages/CreateNewClaim/theme'
 import { Description } from '../pages/UserPages/CreateNewClaim/description'
 import { Local } from '../pages/UserPages/CreateNewClaim/local'
+import { CreateNewPoint } from '../pages/UserPages/CreatenewPoint'
+import { MyAccount } from '../pages/UserPages/MyAccount'
 
 const Stack = createNativeStackNavigator()
 
@@ -24,7 +26,7 @@ export const Navigation = () => {
         screenOptions={{
           headerShown: false
         }}
-        initialRouteName="Home"
+        initialRouteName="MyAccount"
       >
         {/* home */}
         <Stack.Screen name="Home" component={Home} />
@@ -39,6 +41,7 @@ export const Navigation = () => {
         <Stack.Screen name="Claims" component={Claims} />
         <Stack.Screen name="Sponsors" component={Sponsors} />
         <Stack.Screen name="Tips" component={Tips} />
+        <Stack.Screen name="MyAccount" component={MyAccount} />
 
         {/* patrocinador */}
         <Stack.Screen name="HomeSponsor" component={HomeSponsors} />
@@ -47,6 +50,9 @@ export const Navigation = () => {
         <Stack.Screen name="ClaimTheme" component={Theme} />
         <Stack.Screen name="ClaimDescription" component={Description} />
         <Stack.Screen name="ClaimLocal" component={Local} />
+
+        {/* adicionar ponto de preservação */}
+        <Stack.Screen name="CreateNewPoint" component={CreateNewPoint} />
       </Stack.Navigator>
     </NavigationContainer>
   )
