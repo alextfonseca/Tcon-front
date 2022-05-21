@@ -9,7 +9,7 @@ interface CreateNewClaimProps {
   children: any
   linkToNextScreen: string
   title: string
-  stepsScreen: string
+  stepsScreen?: string
 }
 
 export const ScreenWithForm = ({
@@ -30,7 +30,7 @@ export const ScreenWithForm = ({
 
   return (
     <View style={styles.container}>
-      <Steps screen={stepsScreen} />
+      {stepsScreen && <Steps screen={stepsScreen} />}
 
       <View style={styles.content}>
         <Text style={styles.title}>{title}</Text>
