@@ -12,6 +12,7 @@ import { styles } from './styles'
 import Search from '../../../assets/searchIcon.svg'
 import { PointsCardHome } from '../components/PointsCardHome'
 import { UserLayout } from '../../../Layouts/UserLayout'
+import { Tooltip } from '../components/Tooltip'
 
 const data = [
   {
@@ -61,7 +62,10 @@ export const HomeUser = () => {
         </View>
 
         <View style={styles.contentHeader}>
-          <Text style={styles.title}>Pontos de preservação</Text>
+          <View style={styles.tooltip}>
+            <Text style={styles.title}>Pontos de preservação</Text>
+            <Tooltip />
+          </View>
 
           <Text style={styles.points}>
             {data.length} Pontos de preservação cadastrados

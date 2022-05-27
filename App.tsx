@@ -15,7 +15,8 @@ import {
 } from '@expo-google-fonts/raleway'
 
 import AppLoading from 'expo-app-loading'
-import { Navigation } from './src/resources/navigation'
+import { NavigationContainer } from '@react-navigation/native'
+import { MainStackNavigator } from './src/resources/navigation/Navigation'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -33,7 +34,9 @@ export default function App() {
   } else {
     return (
       <>
-        <Navigation />
+        <NavigationContainer>
+          <MainStackNavigator />
+        </NavigationContainer>
       </>
     )
   }

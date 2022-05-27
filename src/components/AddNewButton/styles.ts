@@ -5,9 +5,9 @@ export const styles = StyleSheet.create({
   button: {
     position: 'absolute',
     zIndex: 20,
-    bottom: 100,
+    bottom: 20,
 
-    right: 10,
+    right: 20,
 
     backgroundColor: theme.colors.backgroundGreen,
 

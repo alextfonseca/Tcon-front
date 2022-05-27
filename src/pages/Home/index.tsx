@@ -27,11 +27,13 @@ export default function Home() {
       <StatusBar style="light" backgroundColor="#000" />
 
       <View style={styles.content}>
-        <View>
-          <Illustration style={styles.illustration} />
-        </View>
+        <View style={styles.contentIllustration}>
+          <Illustration />
 
-        <Text style={styles.title}>Como você quer usar nosso aplicativo ?</Text>
+          <Text style={styles.title}>
+            Como você quer usar nosso aplicativo ?
+          </Text>
+        </View>
 
         <View style={styles.containerButton}>
           <Button

@@ -50,7 +50,9 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: theme.fonts.titleSize,
     fontFamily: theme.fonts.title,
-    color: theme.colors.title
+    color: theme.colors.title,
+
+    marginRight: 6
   },
 
   points: {
@@ -63,5 +65,10 @@ export const styles = StyleSheet.create({
     marginTop: 32,
 
     height: '100%'
+  },
+
+  tooltip: {
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 })

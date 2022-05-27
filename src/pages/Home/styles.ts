@@ -25,9 +25,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
 
-  illustration: {
-    width: '100%',
-    height: '100%'
+  contentIllustration: {
+    display: 'flex',
+    alignItems: 'center'
   },
 
   containerButton: {
@@ -36,6 +36,7 @@ export const styles = StyleSheet.create({
   },
 
   title: {
+    marginTop: 32,
     fontSize: theme.fonts.introductionTitleSize,
     textAlign: 'center',
     color: theme.colors.title,

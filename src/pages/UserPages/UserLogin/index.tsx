@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ScrollView, TouchableOpacity, View } from 'react-native'
+import { TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 import ArrowBack from '../../../assets/arrowIcon.svg'
@@ -26,7 +26,7 @@ const UserLogin = () => {
   }
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <TouchableOpacity onPress={navigationToHome}>
         <ArrowBack style={styles.backButton} />
       </TouchableOpacity>
@@ -38,7 +38,7 @@ const UserLogin = () => {
 
         <LoginBox link={'HomeUser'} />
       </View>
-    </ScrollView>
+    </View>
   )
 }
 
