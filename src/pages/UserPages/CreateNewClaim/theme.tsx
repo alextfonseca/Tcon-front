@@ -10,6 +10,7 @@ export const Theme = () => {
   return (
     <ScreenWithForm
       linkToNextScreen={'ClaimDescription'}
+      linkToCancel={'Reclamações'}
       title={'Qual o tema da reclamação ?'}
       stepsScreen={'theme'}
     >

@@ -9,7 +9,8 @@ import { styles } from './styles'
 export const CreateNewPoint = () => {
   return (
     <ScreenWithForm
-      linkToNextScreen="/"
+      linkToNextScreen="HomeUser"
+      linkToCancel="HomeUser"
       title={'Adicione um novo ponto de preservação'}
     >
       <TouchableOpacity style={styles.addNewImageButton}>

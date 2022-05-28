@@ -3,11 +3,13 @@ import React from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 import { Button } from '../../components/Button'
 import { Steps } from '../../pages/UserPages/components/ClaimSteps'
+
 import { styles } from './styles'
 
 interface CreateNewClaimProps {
   children: any
   linkToNextScreen: string
+  linkToCancel: string
   title: string
   stepsScreen?: string
 }
@@ -15,6 +17,7 @@ interface CreateNewClaimProps {
 export const ScreenWithForm = ({
   children,
   linkToNextScreen,
+  linkToCancel,
   title,
   stepsScreen
 }: CreateNewClaimProps) => {
@@ -25,7 +28,7 @@ export const ScreenWithForm = ({
   }
 
   function navigationToCancel() {
-    navigation.navigate('Claims')
+    navigation.navigate(linkToCancel)
   }
 
   return (

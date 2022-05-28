@@ -43,5 +43,10 @@ export const styles = StyleSheet.create({
 
     fontFamily: theme.fonts.text,
     fontSize: theme.fonts.titleSize
+  },
+
+  backButton: {
+    width: 80,
+    height: 80
   }
 })

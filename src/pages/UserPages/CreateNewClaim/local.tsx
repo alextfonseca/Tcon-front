@@ -9,6 +9,7 @@ export const Local = () => {
   return (
     <ScreenWithForm
       stepsScreen={'local'}
+      linkToCancel={'Reclamações'}
       linkToNextScreen={'Claims'}
       title={'Qual foi o local ?'}
     >

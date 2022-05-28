@@ -9,6 +9,7 @@ export const Description = () => {
   return (
     <ScreenWithForm
       linkToNextScreen={'ClaimLocal'}
+      linkToCancel={'Reclamações'}
       title={'Conte o que houve para que possamos mandar para as autoridades'}
       stepsScreen={'about'}
     >
